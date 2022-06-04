@@ -11,6 +11,7 @@ export const useFetch = () => {
     const data = await response.json()
     
     setData(paginate(data))
+    console.log();
     setLoading(false)
   }
 
