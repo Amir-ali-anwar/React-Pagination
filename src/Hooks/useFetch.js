@@ -8,6 +8,9 @@ export const useFetch = () => {
 
   const getProducts = async () => {
     const response = await fetch(url)
+    if(!response){
+      throw new Error("Response not valid")
+    }
     const data = await response.json()
     
     setData(paginate(data))
